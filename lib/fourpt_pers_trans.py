@@ -13,7 +13,7 @@ import cv2
 def pers_transform(img, points):
 	# Get the points in order and extract them separately
 	ordarr = ord_arr_pts(points)
-	(tl, tr, br, bl) = ordarr
+	(bl, br, tr, tl) = ordarr
 
 	# Derive new image width, given by the maximum of distance
 	# between bottom-right and bottom-left or top-right and top-left x-coordinates
