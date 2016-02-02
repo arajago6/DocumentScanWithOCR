@@ -48,8 +48,8 @@ def ord_arr_pts(points):
 	ordarr = np.zeros((4, 2), dtype = "float32")
 
 	# Calculate the sum and difference between point coordinates
-	# Top-left point will have the smallest sum and bottom-right will have the largest
-	# Top-right point will have the smallest difference and bottom-left will have the largest
+	# Bottom-left point will have the smallest sum and top-right will have the largest
+	# Bottom-right point will have the smallest difference and top-left will have the largest
 	psum = points.sum(axis = 1)
 	ordarr[0] = points[np.argmin(psum)]
 	ordarr[2] = points[np.argmax(psum)]
